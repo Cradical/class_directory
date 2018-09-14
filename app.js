@@ -21,11 +21,11 @@ app.post('/', (Request, Response) => {
     queries.create(Request.body).then(status => Response.json({status}))
 })
 
-// app.put('/', (Request, Response) => {
+app.put('/:firstName', (Request, Response) => {
+    queries.update(Request.body, Request.params.firstName).then(status => Response.json({status}))
+})
 
-// })
-
-app.delete('/', (Request, Response) => {
+app.delete('/:id', (Request, Response) => {
     queries.delete(Request.params.id).then(status => Response.json({status}))
 })
 
