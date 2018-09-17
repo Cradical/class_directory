@@ -26,7 +26,7 @@ app.put('/:firstName', (Request, Response) => {
 })
 
 app.delete('/:id', (Request, Response) => {
-    queries.delete(Request.params.id).then(status => Response.json({status}))
+    queries.deleteById(Request.params.id).then(status => Response.json({status}))
 })
 
 app.listen(port, () => {

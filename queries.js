@@ -19,7 +19,7 @@ module.exports = {
             
     },
 
-    delete(id) {
-        return database('students').where('id', id).del()
+    deleteById(id) {
+        return database('students').where('id', id).delete()
     }
 }
